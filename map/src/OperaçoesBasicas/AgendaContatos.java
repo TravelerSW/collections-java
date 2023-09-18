@@ -8,8 +8,8 @@ public class AgendaContatos{
 
     private Map<String, Integer>agendaContatoMap;
 
-    public AgendaContatos(Map<String, Integer>agendaContatoMap){
-        this.agendaContatoMap = new HashMap<>(0, 0);
+    public AgendaContatos(){
+        this.agendaContatoMap = new HashMap<>();
     }
 
     public void adicionarContato(String nome, Integer telefone){
@@ -35,6 +35,17 @@ public class AgendaContatos{
     }
     
     public static void main(String[] args) {
+      AgendaContatos agendaContatos = new AgendaContatos();
+
+       agendaContatos.adicionarContato("Kevin", 88228461);
+       agendaContatos.adicionarContato("ELiane", 88649241);
+       agendaContatos.adicionarContato("machado", 99887766);
+       agendaContatos.exibirContatos();
+       agendaContatos.removerContato("Kevin");
+       agendaContatos.exibirContatos(); 
+
+       System.out.println("O número é: " + agendaContatos.pesquisarPorNome("machado"));
+
        
     }
 }
