@@ -9,7 +9,7 @@ public class Produto {
         this.preco = preco;
         this.quantidade = quantidade;
     }
-    
+
     public String getNome() {
         return nome;
     }
@@ -25,6 +25,11 @@ public class Produto {
     public int getQuantidade() {
         return quantidade;
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + nome + ", preço: " + preco + ", quantidade: " + quantidade;
+    } 
 
     
 }
